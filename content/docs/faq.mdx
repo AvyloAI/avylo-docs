@@ -1,0 +1,102 @@
+---
+title: Frequently Asked Questions
+description: Common questions about Avylo, the living architecture model, AI reasoning, and collaboration.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+
+# Frequently Asked Questions
+
+### What is Avylo?
+Avylo is an **AI-native Architecture Operating System** for technical founders, lead architects, and engineering reviewers. It maintains one living, explainable software architecture model connecting product intent and requirements to technical decisions and components.
+
+---
+
+### Who is Avylo for?
+Avylo is built for:
+- **Technical founders & CTOs** designing initial systems or major greenfield rewrites.
+- **Lead engineers & Architects** evaluating technology trade-offs and communicating design decisions.
+- **Reviewers & Advisors** inspecting system feasibility and providing high-signal feedback.
+
+---
+
+### Is Avylo an architecture diagram generator?
+**No.** While Avylo visualizes your system interactively, diagrams are **derived views** of an underlying semantic architecture graph. In Avylo, the Canonical Architecture Model is the authoritative source of truth, not a drawing file.
+
+---
+
+### Does Avylo replace a software architect?
+**No.** Avylo acts as an AI reasoning partner and operating system. It accelerates research, evaluates trade-offs, detects gaps, and formulates structured proposals, but the human **Creator retains final authority** over all architectural commitments.
+
+---
+
+### What is Architecture V1?
+**Architecture V1** is the first canonical architecture baseline produced by Bootstrap Discovery. It represents a coherent, complete system model ready for deep exploration and iteration in the workspace.
+
+---
+
+### What is Project Knowledge?
+**Project Knowledge** is the private, revisioned source material provided by the creator, including product goals, user personas, traffic projections, and business constraints.
+
+---
+
+### What is a Blueprint?
+A **Blueprint** is the structured synthesis of your product intent derived from Project Knowledge. It defines the core product thesis, business boundaries, and primary operating constraints before selecting technologies.
+
+---
+
+### What is an Architecture Decision?
+An **Architecture Decision** is an explicit, explainable record of a material architectural choice. It details the context, AI recommendation, evaluated alternatives, trade-off matrix, evidence citations, and confidence score.
+
+---
+
+### What is an Assumption?
+An **Assumption** is an AI-inferred baseline value or standard configuration that the creator has not yet explicitly confirmed (e.g., standard relational storage for user profiles). Assumptions can be reviewed with `Accept` or `Change`.
+
+---
+
+### What is an Open Decision?
+An **Open Decision** is an unresolved, high-impact architectural fork where multiple viable alternatives exist and the choice meaningfully alters downstream topology and tech stack.
+
+---
+
+### What is the difference between an Assumption and an Open Decision?
+- **Assumption**: Low-risk AI default inference. Non-blocking; system operates with the default until modified.
+- **Open Decision**: High-impact architectural fork requiring creator review and explicit trade-off evaluation.
+
+---
+
+### What is the Canonical Architecture Model?
+The **Canonical Architecture Model** is the single editable source of truth for your software system in Avylo. It defines all system components, databases, queues, boundaries, and connections.
+
+---
+
+### Can the AI Architect change my architecture automatically?
+**No.** The AI Architect never silently mutates your canonical architecture. All proposed structural changes are delivered as previewable **Change Sets** that require your explicit approval.
+
+---
+
+### What is Architecture Health?
+**Architecture Health** is an evidence-based assessment of your project across dimensions like *Business Understanding*, *Architecture Coverage*, *Decision Confidence*, and *Missing Requirements*. It is calculated from actual grounded evidence, not a decorative vanity score.
+
+---
+
+### What is Architecture Maturity?
+**Architecture Maturity** is an objective measure of where your system stands in the lifecycle:
+`Idea → Business Defined → Capabilities Complete → Architecture Stable → Deployment Ready`.
+Maturity can regress if foundational business evidence becomes stale.
+
+---
+
+### Can someone else review my architecture?
+**Yes.** You can invite external reviewers (advisors, staff engineers, design partners) with scoped access. Reviewers can explore the model and submit structured feedback without the ability to overwrite your canonical model.
+
+---
+
+### How does Avylo explain architecture decisions?
+Avylo provides graph-grounded explainability. When inspecting any node or decision, clicking **Why?** reveals the full chain of evidence: from the original Project Knowledge statement, through the Capability and Requirement, to the chosen Architecture Decision.
+
+---
+
+### What happens when architecture evolves?
+When your product requirements expand, update your Project Knowledge. The AI Architect analyzes the delta, identifies affected components, and proposes an atomic **Change Set** that updates the canonical model while preserving history in the **Activity Timeline**.

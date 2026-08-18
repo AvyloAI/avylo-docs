@@ -1,0 +1,57 @@
+---
+title: Understanding Architecture V1
+description: What your generated Architecture V1 represents and how it establishes the foundation for your ongoing system evolution.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { ScreenshotPlaceholder } from '@/components/mdx/ScreenshotPlaceholder';
+
+# Understanding Architecture V1
+
+**Architecture V1** is the first canonical architecture baseline produced by Bootstrap Discovery. It represents a coherent, complete system model ready for real-world engineering.
+
+<ScreenshotPlaceholder
+  id="architecture-v1"
+  title="Architecture V1 Baseline"
+  description="The initial canonical architecture model rendered in the workspace upon completing Bootstrap Discovery."
+  recommendedSize="1600×1000"
+/>
+
+---
+
+## What Architecture V1 Contains
+
+When you open your Architecture V1 in the workspace, you receive a fully structured system containing:
+
+### 1. The Canonical Model Graph
+A complete graph of system entities, including:
+- **Services & Compute**: Web applications, API gateways, background workers.
+- **Data Stores**: Primary databases, caching layers, document storage.
+- **Messaging & Event Streams**: Message queues, pub/sub topics, streaming pipelines.
+- **External Boundaries**: Third-party APIs, auth providers, CDNs, external storage.
+- **Connections**: Protocols (HTTP, gRPC, WebSocket), data flow directions, and coupling boundaries.
+
+### 2. Traceability Grounding
+Every element in Architecture V1 is connected directly back to the capability and requirement that justified its creation. You never have orphaned infrastructure with unclear ownership.
+
+### 3. Baseline Health Metrics
+An initial evaluation of:
+- **Architecture Coverage**: Percentage of discovered capabilities backed by explicit components.
+- **Decision Confidence**: Average confidence score across all generated decisions.
+- **Open Decision Count**: Material topics flagged for your review.
+
+---
+
+## Architecture V1 Is Not Carved in Stone
+
+Architecture V1 is your starting baseline—not a rigid decree.
+
+<Callout type="info" title="A Living System">
+Traditional architecture documents become outdated because updating them is tedious. In Avylo, Architecture V1 is the beginning of a continuous conversation between you and the AI Architect.
+</Callout>
+
+### Recommended Next Steps After V1
+1. **Inspect the Visual Canvas**: Explore system components, zoom into specific domains, and inspect component properties.
+2. **Review Assumptions**: Confirm or adjust the baseline assumptions made by the AI Architect during discovery.
+3. **Address Open Decisions**: Prioritize high-impact open decisions that determine core technology choices.
+4. **Evaluate Architecture Health**: Check if any critical requirements remain unaddressed before starting development.

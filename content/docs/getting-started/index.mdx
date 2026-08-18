@@ -1,0 +1,70 @@
+---
+title: Introduction
+description: Discover Avylo, the AI-native Architecture Operating System designed for technical founders, lead engineers, and reviewers.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Cards, Card } from 'fumadocs-ui/components/card';
+import { Mermaid } from '@/components/mdx/Mermaid';
+
+# Introduction to Avylo
+
+**Avylo** is an AI-native Architecture Operating System that enables technical founders, lead architects, and engineering teams to build, understand, review, and evolve a single **living software architecture model**.
+
+Rather than treating architecture as static diagrams or disconnected wikis that immediately rot, Avylo continuously bridges the gap between high-level business goals and low-level technical decisions.
+
+<Callout type="info" title="Current Stage: Private Alpha">
+Avylo is currently in **Private Alpha**. Access is granted to early-stage technical founders, architecture reviewers, and design partners focusing on greenfield software architectures.
+</Callout>
+
+## The Problem Avylo Solves
+
+Modern software engineering teams face fundamental challenges when designing systems:
+
+1. **Static Diagrams Rot Fast**: Architecture diagrams drawn in whiteboard tools are obsolete within days after implementation starts.
+2. **Disconnected Intent**: When codebases grow, nobody remembers *why* a particular database, queue pattern, or authentication boundary was chosen over its alternatives.
+3. **Premature Infrastructure Obsession**: Teams jump straight into cloud service diagrams before clarifying business capabilities, requirements, and domain boundaries.
+4. **Shallow AI Tools**: Generic AI chat assistants offer hallucinations and ungrounded code snippets without maintaining a persistent, authoritative system model.
+
+## How Avylo Works
+
+Avylo maintains a single **Canonical Architecture Model**. Every diagram, view, specification, and export is a derived view from this authoritative model.
+
+```mermaid
+flowchart LR
+  A[Project Knowledge] --> B[Blueprint]
+  B --> C[Domains & Capabilities]
+  C --> D[Requirements]
+  D --> E[Architecture Decisions]
+  E --> F[Architecture Model]
+  F --> G[Health, Maturity & Artifacts]
+```
+
+### 1. Business-First Grounding
+You start by providing raw **Project Knowledge**—your product description, user personas, scaling goals, and constraints. Avylo synthesizes this into a structured **Blueprint** that identifies core business domains and buildable capabilities before selecting any technical infrastructure.
+
+### 2. Explainable Architecture Decisions
+Every material architectural choice is evaluated as an explicit **Architecture Decision**. Avylo presents the recommendation alongside trade-offs, alternative options, impact analysis, and confidence scores.
+
+### 3. Continuous Architecture Workspace
+Your architecture lives inside an interactive workspace. As your product evolves, the AI Architect helps you investigate enhancements, identify missing requirements, and propose atomic **Change Sets**.
+
+### 4. Absolute Creator Authority
+AI does not blindly overwrite your system. The **Creator** retains full authority over what enters the canonical model. The AI Architect proposes, analyzes, and explains—you decide.
+
+---
+
+## Next Steps
+
+<Cards>
+  <Card
+    title="Core Concepts"
+    description="Learn the canonical vocabulary and architectural lifecycle of Avylo."
+    href="/docs/getting-started/core-concepts"
+  />
+  <Card
+    title="Create Your First Architecture"
+    description="Step-by-step walkthrough of starting a project with Bootstrap Discovery."
+    href="/docs/getting-started/first-architecture"
+  />
+</Cards>

@@ -1,0 +1,73 @@
+---
+title: Create Your First Architecture
+description: Step-by-step guide to starting a greenfield project and completing Bootstrap Discovery.
+---
+
+import { Steps } from 'fumadocs-ui/components/steps';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { ScreenshotPlaceholder } from '@/components/mdx/ScreenshotPlaceholder';
+
+# Create Your First Architecture
+
+Starting a new software architecture in Avylo is fast, structured, and focused on business reality.
+
+Unlike traditional tools that force you through endless generic onboarding questionnaires or blank canvases, Avylo uses **Bootstrap Discovery** to rapidly build a grounded **Architecture V1**.
+
+<ScreenshotPlaceholder
+  id="create-project"
+  title="Create Project Modal"
+  description="Interface for initiating a new architecture project and entering initial Project Knowledge."
+  recommendedSize="1600×1000"
+/>
+
+---
+
+## The Bootstrap Discovery Journey
+
+<Steps>
+### Step 1: Create a Project
+From your Avylo dashboard, select **New Project**. Give your project a clear name and initial scope.
+
+### Step 2: Provide Meaningful Project Knowledge
+Paste or write a rich description of what you are building. Great inputs include:
+- The core problem your product solves and for whom.
+- Key user flows (e.g., *“Users upload large video files, which are transcribed and indexed for semantic search”*).
+- Expected scale and traffic characteristics (e.g., *“Targeting 10,000 daily active users with bursty morning workloads”*).
+- Known constraints (e.g., *“Must run on AWS, require SOC 2 compliance within 6 months”*).
+
+<Callout type="tip" title="Quality in, Quality out">
+You do not need to specify technical frameworks yet. Focus on describing business intent, data flows, and constraints. Avylo uses this knowledge to infer requirements and recommend optimal patterns.
+</Callout>
+
+### Step 3: Avylo Analyzes the Project
+Once submitted, the AI Architect decomposes your project knowledge:
+1. Formulates the **Blueprint**.
+2. Discovers business **Domains** and **Capabilities**.
+3. Derives functional and non-functional **Requirements**.
+4. Drafts baseline **Architecture Decisions**.
+
+<ScreenshotPlaceholder
+  id="bootstrap-discovery"
+  title="Bootstrap Discovery in Progress"
+  description="Real-time synthesis showing confidence metrics, domain discovery, and material questions."
+  recommendedSize="1600×1000"
+/>
+
+### Step 4: Resolve Material Uncertainty
+Avylo only interrupts you for **material business or architecture uncertainty**. If confidence is high on standard patterns (e.g., relational storage for structured billing data), Avylo automatically forms documented assumptions.
+
+If a critical fork exists (e.g., synchronous vs asynchronous processing for long-running AI pipelines), Avylo will present focused questions to clarify intent.
+
+### Step 5: Bootstrap Discovery Completion
+When overall discovery confidence reaches the target threshold (typically &ge; 82%), discovery automatically completes. Avylo generates your **Architecture V1** and transitions you directly into the persistent Architecture Workspace.
+</Steps>
+
+---
+
+## What Happens Next?
+
+Once Bootstrap Discovery concludes:
+- Your initial **Canonical Architecture Model** is locked as the baseline.
+- You can inspect every component, database, queue, and service in the visual canvas.
+- You can review and confirm initial **Assumptions**.
+- You can explore **Open Decisions** and iterate your architecture safely.

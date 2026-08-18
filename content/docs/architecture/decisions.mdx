@@ -1,0 +1,70 @@
+---
+title: Architecture Decisions & Explainability
+description: How Avylo captures, evaluates, and documents material architecture choices with complete traceability and trade-off analysis.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { ScreenshotPlaceholder } from '@/components/mdx/ScreenshotPlaceholder';
+
+# Architecture Decisions & Explainability
+
+An **Architecture Decision** in Avylo is not merely a record of what was chosen—it is a comprehensive, explainable rationale connecting requirements, trade-offs, evaluated alternatives, and downstream consequences.
+
+<ScreenshotPlaceholder
+  id="architecture-decision"
+  title="Architecture Decision Detail View"
+  description="Full decision record displaying context, recommendation, alternative comparison table, evidence citations, and creator acceptance state."
+  recommendedSize="1600×1000"
+/>
+
+---
+
+## Anatomy of an Architecture Decision Record
+
+Each Architecture Decision in Avylo contains:
+
+### 1. Title & Status
+A concise descriptor (e.g., *“AD-004: Primary Relational Storage & Multi-Tenancy Isolation Strategy”*) and current lifecycle state (*Proposed*, *Accepted*, *Superseded*, or *Rejected*).
+
+### 2. Context & Driver
+The specific business context, capabilities, and requirements that triggered this decision.
+
+### 3. Primary Recommendation
+The AI Architect’s proposed solution (e.g., *“PostgreSQL with Row-Level Security (RLS) for tenant data isolation”*).
+
+### 4. Evaluated Alternatives
+A structured breakdown of alternatives that were seriously considered (e.g., *Separate Database per Tenant*, *Schema-per-Tenant*, *DynamoDB Multi-Tenant Table*), explaining why each alternative fell short for this project’s specific constraints.
+
+### 5. Trade-off Matrix
+Comparative evaluation across operational dimensions:
+- **Complexity**: Maintenance and deployment burden.
+- **Cost**: Infrastructure spend at current vs. 10x scale.
+- **Latency / Performance**: Throughput and response times.
+- **Team Velocity**: Developer onboarding and tooling maturity.
+
+### 6. Evidence & Grounding
+Direct links to the Project Knowledge statements and requirements that substantiate the recommendation.
+
+---
+
+## Graph-Grounded Explainability
+
+One of Avylo’s core capabilities is instant explainability.
+
+When inspecting any node in your architecture model, you can click **Why?** to inspect the full chain of evidence:
+
+```text
+Evidence (Project Knowledge statement)
+   ↓
+Requirement (Sub-100ms analytics response)
+   ↓
+Capability (Real-Time Ingestion)
+   ↓
+Architecture Decision (ClickHouse vs PostgreSQL)
+   ↓
+Architecture Element (ClickHouse Analytical Node)
+```
+
+<Callout type="info" title="No Hallucinated Explanations">
+The AI Architect does not invent generic answers on the fly. All explainability responses are strictly grounded in your project's versioned architecture knowledge graph.
+</Callout>

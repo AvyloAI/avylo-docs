@@ -1,0 +1,56 @@
+---
+title: Workspace Overview
+description: Navigating the central Avylo Architecture Workspace, interactive canvas, properties inspector, and history timeline.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { ScreenshotPlaceholder } from '@/components/mdx/ScreenshotPlaceholder';
+
+# Workspace Overview
+
+The **Architecture Workspace** is the core operational cockpit in Avylo. It provides a persistent, real-time environment where you inspect your architecture model, collaborate with the AI Architect, and manage architectural evolution.
+
+<ScreenshotPlaceholder
+  id="workspace-overview"
+  title="Architecture Workspace Overview"
+  description="Main interface showing the visual architecture canvas, AI Architect panel, properties inspector, and activity timeline."
+  recommendedSize="1600×1000"
+/>
+
+---
+
+## Workspace Layout & Key Surfaces
+
+The workspace is organized into four integrated surfaces:
+
+### 1. The Interactive Architecture Canvas (Center)
+The visual representation of your Canonical Architecture Model.
+- **Node Graph**: Displays services, databases, queues, storage, and external providers with distinct visual cues.
+- **Domain Boundaries**: Visually clusters components by business domain.
+- **Connection Lines**: Represents network protocols, data flows, and dependencies.
+- **Interactive Controls**: Pan, zoom, fit to screen, and filter views by domain or component type.
+
+### 2. The AI Architect & Decisions Panel (Left / Drawer)
+The reasoning interface where the AI Architect presents:
+- **Active Recommendations**: Upcoming architecture decisions or optimizations.
+- **Open Decisions**: Architectural forks awaiting your review.
+- **Assumptions**: Pending AI inferences you can accept or customize.
+- **Proposals & Change Sets**: Previews of proposed structural adjustments.
+
+### 3. Properties & Traceability Inspector (Right)
+When you select any component, decision, or capability:
+- **Details**: Name, type, technology recommendation, and description.
+- **Traceability Linkages**: Explicit connections showing which requirements and capabilities this component fulfills.
+- **Related Decisions**: The exact Architecture Decisions that created or modified this component.
+- **Health Indicators**: Specific health and confidence metrics for this node.
+
+### 4. Activity Timeline (Bottom / Drawer)
+A human-readable, chronological record of every architecture mutation:
+- Decision approvals.
+- Change Set applications.
+- Project Knowledge updates.
+- Milestone snapshots.
+
+<Callout type="tip" title="Replacing Ephemeral Chat">
+Unlike chatbot interfaces where crucial reasoning is lost in a long scrollable chat transcript, Avylo records all architectural history in the structured **Activity Timeline** attached directly to your project.
+</Callout>

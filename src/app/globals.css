@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/preset.css';
+@import 'fumadocs-ui/css/neutral.css';
+
+@theme {
+  --color-avylo-blue: #0087f8;
+  --color-avylo-cyan: #44c4f6;
+  --color-avylo-deep: #0057d6;
+  --color-avylo-dark: #0d1829;
+  --color-avylo-card: #162338;
+  --color-avylo-surface: #1c2d43;
+}
+
+:root {
+  --color-fd-background: #ffffff;
+  --color-fd-foreground: #0f172a;
+  --color-fd-primary: #0087f8;
+  --color-fd-primary-foreground: #ffffff;
+}
+
+.dark {
+  --color-fd-background: #0d1829;
+  --color-fd-foreground: #f0f4ff;
+  --color-fd-card: #162338;
+  --color-fd-card-foreground: #f0f4ff;
+  --color-fd-popover: #162338;
+  --color-fd-popover-foreground: #f0f4ff;
+  --color-fd-primary: #0087f8;
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-muted: #1c2d43;
+  --color-fd-muted-foreground: #7a95b5;
+  --color-fd-border: rgba(148, 180, 255, 0.12);
+  --color-fd-accent: rgba(0, 135, 248, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 180, 255, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 180, 255, 0.3);
+}

@@ -1,0 +1,75 @@
+---
+title: Architecture Health & Maturity
+description: Track evidence-based architecture coverage, confidence, drift detection, and objective lifecycle maturity stages.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { ScreenshotPlaceholder } from '@/components/mdx/ScreenshotPlaceholder';
+
+# Architecture Health & Maturity
+
+Avylo provides continuous, evidence-grounded visibility into the state and readiness of your system.
+
+Rather than providing arbitrary vanity scores, Avylo calculates **Architecture Health** and **Architecture Maturity** directly from verified requirements, confirmed decisions, and model linkages.
+
+---
+
+## Architecture Health
+
+**Architecture Health** assesses how thoroughly your software architecture satisfies your business goals and identifies technical debt before code is written.
+
+<ScreenshotPlaceholder
+  id="architecture-health"
+  title="Architecture Health Dashboard"
+  description="Breakdown of Business Understanding, Architecture Coverage, Decision Confidence, and Missing Requirements."
+  recommendedSize="1600×1000"
+/>
+
+### Health Dimensions
+
+Avylo measures health across six concrete dimensions:
+
+1. **Business Understanding**: How completely your Project Knowledge defines core user personas, scaling constraints, and functional goals.
+2. **Architecture Coverage**: The percentage of discovered capabilities and requirements that are fulfilled by explicit components in your model.
+3. **Decision Confidence**: The aggregate confidence score across all accepted Architecture Decisions.
+4. **Missing Requirements**: Capabilities identified in your Blueprint that lack concrete technical specifications.
+5. **Architectural Drift**: Discrepancies between updated Project Knowledge and existing architecture topology.
+6. **Technical Debt Risk**: Identification of single-point-of-failure components, unbuffered queues, or tightly coupled boundaries.
+
+---
+
+## Architecture Maturity Stages
+
+**Architecture Maturity** is an objective measure of where your system stands in the engineering lifecycle.
+
+<ScreenshotPlaceholder
+  id="architecture-maturity"
+  title="Architecture Maturity Progression"
+  description="Visual lifecycle tracker showing progression from Idea to Deployment Ready with explicit gate requirements."
+  recommendedSize="1600×1000"
+/>
+
+Avylo defines five sequential stages:
+
+```text
+1. Idea
+   ↓ (Rich project knowledge provided)
+2. Business Defined
+   ↓ (Domains & capabilities discovered)
+3. Capabilities Complete
+   ↓ (All capabilities have explicit requirements)
+4. Architecture Stable
+   ↓ (All open decisions resolved, no unconfirmed assumptions)
+5. Deployment Ready
+```
+
+### Stage Gates & Evidence
+- **Idea**: Project created with initial raw thoughts.
+- **Business Defined**: Blueprint generated with clear domain boundaries.
+- **Capabilities Complete**: All functional workflows mapped to concrete capabilities.
+- **Architecture Stable**: Canonical Architecture Model established with high decision confidence.
+- **Deployment Ready**: Critical non-functional requirements (security, logging, backup, scaling) specified.
+
+<Callout type="warn" title="Maturity Can Regress">
+If you introduce major new business requirements or modify fundamental constraints in your Project Knowledge, your maturity stage can naturally regress until new decisions and capabilities are stabilized.
+</Callout>

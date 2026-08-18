@@ -1,0 +1,76 @@
+---
+title: Working with the AI Architect
+description: How the AI Architect reasons about your system, evaluates trade-offs, and proposes changes while preserving creator authority.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { ScreenshotPlaceholder } from '@/components/mdx/ScreenshotPlaceholder';
+
+# Working with the AI Architect
+
+The **AI Architect** in Avylo is an active reasoning partner, not a generic conversational chatbot.
+
+Instead of answering isolated prompts with speculative code, the AI Architect continuously reads your **Project Knowledge**, evaluates your **Requirements**, inspects the **Canonical Architecture Model**, and proposes structured, explainable improvements.
+
+<ScreenshotPlaceholder
+  id="ai-architect-recommendation"
+  title="AI Architect Recommendation Card"
+  description="Detailed recommendation view showing trade-offs, confidence score, alternatives, and Accept/Customize actions."
+  recommendedSize="1600×1000"
+/>
+
+---
+
+## The Reasoning Workflow
+
+Whenever you ask for architectural guidance or trigger an improvement analysis, the AI Architect follows a rigorous four-stage evaluation:
+
+```text
+1. Context Gathering (Requirements + Current Model)
+      ↓
+2. Alternative Exploration (Identify 2–4 viable architectural patterns)
+      ↓
+3. Trade-off & Blast Radius Analysis (Performance, Complexity, Cost, Risk)
+      ↓
+4. Structured Proposal (Recommendation + Confidence + Evidence)
+```
+
+---
+
+## Anatomy of an AI Recommendation
+
+Every proposal presented by the AI Architect contains:
+
+### 1. The Core Recommendation
+A clear statement of the chosen pattern or component (for example: *“Use PostgreSQL with pgvector for initial hybrid relational + vector search workloads”*).
+
+### 2. Context & Motivation
+Explains *why* this decision is relevant now, citing specific capabilities in your project.
+
+### 3. Alternative Options
+Details realistic alternatives that were evaluated (e.g., *Dedicated Pinecone vector database*, *Elasticsearch cluster*), explaining why they were not chosen as the primary recommendation.
+
+### 4. Trade-Off Comparison
+A side-by-side comparison across key dimensions:
+- **Operational Complexity**: Setup overhead and maintenance burden.
+- **Latency & Throughput**: Performance characteristics at target scale.
+- **Infrastructure Cost**: Estimated baseline and scaling costs.
+- **Developer Velocity**: Familiarity and tooling ecosystem.
+
+### 5. Confidence Score
+A calculated score representing the AI Architect's certainty based on the richness of your Project Knowledge and clarity of constraints.
+
+---
+
+## Interacting with Recommendations
+
+For every recommendation, you have full control:
+
+- **Accept**: Applies the recommendation and updates the Canonical Architecture Model.
+- **Customize**: Adjusts specific parameters, technologies, or deployment targets before applying.
+- **Compare Alternatives**: Opens an in-depth comparison matrix between competing options.
+- **Skip / Dismiss**: Archives the recommendation if it does not fit your current roadmap.
+
+<Callout type="warn" title="No Silent Mutations">
+The AI Architect **never** applies structural changes to your canonical architecture model without your explicit review and acceptance.
+</Callout>

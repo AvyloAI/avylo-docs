@@ -1,0 +1,9 @@
+{
+  "title": "Architecture Workspace",
+  "pages": [
+    "index",
+    "ai-architect",
+    "assumptions-open-decisions",
+    "health-maturity"
+  ]
+}

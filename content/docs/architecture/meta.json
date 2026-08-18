@@ -1,0 +1,9 @@
+{
+  "title": "Understanding Architecture",
+  "pages": [
+    "project-knowledge-blueprint",
+    "capabilities-requirements",
+    "decisions",
+    "model"
+  ]
+}

@@ -1,0 +1,43 @@
+---
+title: Sharing an Architecture
+description: How to invite technical reviewers, advisors, and team members to inspect your living architecture model.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Steps } from 'fumadocs-ui/components/steps';
+
+# Sharing an Architecture
+
+Collaborating with advisors, senior architects, and team members is crucial for validating design choices before writing code.
+
+Avylo allows project creators to safely share their architecture with external stakeholders while maintaining strict control over canonical changes.
+
+---
+
+## Creator Authority & Role Boundaries
+
+In Avylo, permissions are cleanly separated:
+
+- **Creator (Owner)**: Can modify Project Knowledge, approve or reject Architecture Decisions, apply Change Sets, and manage project access.
+- **Reviewer**: Can inspect the architecture model, review decisions, trace evidence, and submit feedback comments or change proposals.
+
+<Callout type="warn" title="No Direct Overwrite">
+Reviewers cannot directly edit your canonical architecture. Any suggestions they make are delivered as **Reviewer Proposals** that you can review and accept.
+</Callout>
+
+---
+
+## How to Share Your Project
+
+<Steps>
+### Step 1: Open the Project Share Settings
+In your workspace top navigation bar, click **Share**.
+
+### Step 2: Configure Review Scope
+Select the scope of access you wish to grant:
+- **Full Architecture Inspection**: Reviewer can explore all domains, decisions, and health metrics.
+- **Scoped Review**: Reviewer access limited to specific target domains or open decisions.
+
+### Step 3: Send Invitation
+Enter the reviewer’s email address. They will receive an invitation link to access your project in Reviewer Mode.
+</Steps>

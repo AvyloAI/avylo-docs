@@ -1,0 +1,60 @@
+---
+title: The Canonical Architecture Model
+description: Understanding the authoritative source of truth for your system components, boundaries, and connections.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { ScreenshotPlaceholder } from '@/components/mdx/ScreenshotPlaceholder';
+
+# The Canonical Architecture Model
+
+The **Canonical Architecture Model** is the single editable source of truth for your entire software system in Avylo.
+
+Unlike traditional whiteboard or drawing tools where components are mere graphical boxes and text labels, Avylo treats every component as a semantically rich entity within a structured architecture graph.
+
+<ScreenshotPlaceholder
+  id="architecture-model"
+  title="Canonical Architecture Model Graph"
+  description="High-fidelity view of the system architecture graph showing typed nodes, directional data flows, domain boundaries, and protocol metadata."
+  recommendedSize="1600×1000"
+/>
+
+---
+
+## Model Entities & Topology
+
+The Canonical Architecture Model models your system with precise architectural types:
+
+### 1. Compute & Services
+- **Web Applications**: Frontend single-page apps, SSR applications, mobile clients.
+- **API Gateways & Ingress**: Reverse proxies, load balancers, rate limiters.
+- **Backend Services**: Monoliths, microservices, serverless functions, background workers.
+
+### 2. State & Storage
+- **Primary Relational Databases**: PostgreSQL, MySQL, CockroachDB.
+- **Document & Key-Value Stores**: Redis, DynamoDB, MongoDB.
+- **Analytical & Vector Stores**: ClickHouse, Snowflake, pgvector, Pinecone.
+- **Blob & Object Storage**: S3, Cloud Storage, R2.
+
+### 3. Messaging & Integration
+- **Message Queues & Brokers**: RabbitMQ, SQS, Celery, BullMQ.
+- **Event Streaming**: Apache Kafka, AWS Kinesis, Redpanda.
+- **Third-Party Providers**: Stripe, Auth0, Twilio, OpenAI, Resend.
+
+---
+
+## Authoritative Model vs. Derived Views
+
+A core design principle of Avylo is the separation between the **Canonical Model** and **Derived Views**.
+
+```text
+       Canonical Architecture Model (Authoritative Source)
+                               ↓
+  ┌────────────────────────────┼───────────────────────────┐
+  ↓                            ↓                           ↓
+Visual Canvas            C4 Diagram Views            Exported Specs
+```
+
+- **You edit the Model**: When an Architecture Decision is accepted, the model updates.
+- **Views re-render automatically**: The visual canvas, domain-specific zoom views, sequence diagrams, and architecture exports update deterministically.
+- **No out-of-sync diagrams**: You never have to manually redraw connections or update box labels across multiple static drawing files.

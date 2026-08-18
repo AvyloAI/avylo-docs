@@ -1,0 +1,46 @@
+---
+title: Reviewer Experience & Feedback
+description: How technical reviewers inspect architecture, explore trade-offs, and submit structured feedback.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { ScreenshotPlaceholder } from '@/components/mdx/ScreenshotPlaceholder';
+
+# Reviewer Experience & Feedback
+
+When a reviewer opens an Avylo architecture link, they enter a dedicated **Reviewer Experience** designed specifically for high-signal architectural evaluation.
+
+<ScreenshotPlaceholder
+  id="reviewer-experience"
+  title="Reviewer Inspection Interface"
+  description="Focused reviewer workspace showing scoped architecture canvas, decision audit trail, and structured feedback submission drawer."
+  recommendedSize="1600×1000"
+/>
+
+---
+
+## What Reviewers Can Do
+
+### 1. Interactive Architecture Exploration
+Reviewers can pan, zoom, inspect component topologies, and filter by domain without worrying about accidentally moving boxes or breaking connections.
+
+### 2. Deep Decision Review
+Reviewers can click on any component to read the exact **Architecture Decision** that created it:
+- See the primary recommendation and evaluated alternatives.
+- Inspect the trade-off matrix (complexity, cost, performance).
+- Verify the grounded evidence citing business requirements.
+
+### 3. Submitting Structured Feedback
+Rather than sending vague messages over Slack or email, reviewers can attach contextual feedback directly to nodes or decisions:
+- **Questions**: Request clarification on ambiguous constraints.
+- **Risk Highlights**: Flag potential security, scaling, or operational pitfalls.
+- **Alternative Proposals**: Suggest alternative technologies or architectural patterns for the creator's consideration.
+
+---
+
+## How Creators Process Reviewer Feedback
+
+When a reviewer submits feedback:
+1. The creator receives an alert in their **Activity Timeline**.
+2. If the reviewer suggested an alternative pattern, the AI Architect analyzes the proposal's blast radius and presents a comparative **Change Set**.
+3. The creator can either accept the proposal (which applies the change to the canonical model) or reply with clarifying context.

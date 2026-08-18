@@ -1,0 +1,12 @@
+{
+  "title": "Avylo Docs",
+  "pages": [
+    "index",
+    "getting-started",
+    "workspace",
+    "architecture",
+    "review",
+    "faq",
+    "getting-help"
+  ]
+}

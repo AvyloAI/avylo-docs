@@ -1,0 +1,62 @@
+---
+title: Assumptions vs. Open Decisions
+description: Understanding how Avylo categorizes and manages architectural uncertainty.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { ScreenshotPlaceholder } from '@/components/mdx/ScreenshotPlaceholder';
+
+# Assumptions vs. Open Decisions
+
+Managing uncertainty is the core challenge of software architecture. If an architecture tool stops you to ask about every minor detail, onboarding takes hours. If it assumes everything silently, the architecture quickly becomes inaccurate.
+
+Avylo solves this by making a strict distinction between **Assumptions** and **Open Decisions**.
+
+<ScreenshotPlaceholder
+  id="assumptions-open-decisions"
+  title="Assumptions & Open Decisions Manager"
+  description="Interface separating low-risk AI assumptions from high-impact open architectural decisions."
+  recommendedSize="1600×1000"
+/>
+
+---
+
+## Comparison Table
+
+| Dimension | Assumption | Open Decision |
+| :--- | :--- | :--- |
+| **Definition** | AI-inferred baseline value or standard default | Unresolved high-impact architectural fork |
+| **Impact** | Low to moderate; localized | High; alters downstream topology & stack |
+| **Blocking?** | Non-blocking (system operates with default) | Highlighted (requires creator evaluation) |
+| **Alternatives** | Minor parameter variations | Distinct, mutually exclusive architecture paths |
+| **Action** | `Accept` or `Change` | In-depth trade-off evaluation & selection |
+| **Example** | *“Assume single-region US-East deployment”* | *“Synchronous REST vs. Asynchronous Event-Driven Messaging”* |
+
+---
+
+## Working with Assumptions
+
+During Bootstrap Discovery and subsequent iterations, Avylo makes reasonable inferences based on your project description.
+
+For example, if you describe building a standard SaaS B2B web application:
+- Avylo assumes a standard relational schema with JWT authentication.
+- Avylo assumes containerized deployment on a major cloud provider.
+
+### Managing an Assumption
+1. Navigate to the **Assumptions** tab in your workspace.
+2. Review the assumption context and confidence score.
+3. Click **Accept** to convert it into a confirmed requirement, or **Change** to specify your custom preference.
+
+---
+
+## Working with Open Decisions
+
+An **Open Decision** is generated when multiple architectural patterns are viable, and choosing one over the other meaningfully affects:
+- Data consistency guarantees (e.g., Eventual Consistency vs Strong Consistency).
+- System latency profiles.
+- Team operational overhead.
+- Cloud cost structure.
+
+<Callout type="info" title="Resolving Open Decisions">
+Resolving an Open Decision generates an explicit **Architecture Decision** entry in your project audit history, linking the chosen alternative to your requirements and updating the Canonical Architecture Model.
+</Callout>
